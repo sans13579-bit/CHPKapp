@@ -1,0 +1,41 @@
+﻿<Window x:Class="CHPKapp.AddRecordWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="Выдача ключа" Height="500" Width="400"
+        WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+
+    <Grid Margin="20">
+        <StackPanel>
+            <TextBlock Text="Новая запись" FontSize="22" FontWeight="Bold" Margin="0,0,0,20"/>
+
+            <!-- Дата -->
+            <DatePicker x:Name="DatePickerRecord" materialDesign:HintAssist.Hint="Дата" 
+                        Style="{StaticResource MaterialDesignOutlinedDatePicker}" Margin="0,0,0,15"/>
+
+            <!-- ФИО -->
+            <TextBox x:Name="TxtFullName" materialDesign:HintAssist.Hint="ФИО (Кто берет)" 
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="0,0,0,15"/>
+
+            <!-- Комната -->
+            <TextBox x:Name="TxtRoom" materialDesign:HintAssist.Hint="Номер комнаты" 
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="0,0,0,15"/>
+
+            <!-- Время выдачи -->
+            <TextBox x:Name="TxtIssueTime" materialDesign:HintAssist.Hint="Время выдачи (ЧЧ:ММ)" 
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="0,0,0,15"/>
+
+            <!-- Примечание -->
+            <TextBox x:Name="TxtNote" materialDesign:HintAssist.Hint="Примечание (необязательно)" 
+                     Style="{StaticResource MaterialDesignOutlinedTextBox}" Margin="0,0,0,25"/>
+
+            <!-- Кнопки -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Content="Отмена" Click="BtnCancel_Click" 
+                        Style="{StaticResource MaterialDesignFlatButton}" Margin="0,0,10,0"/>
+                <Button Content="Сохранить" Click="BtnSave_Click" 
+                        Style="{StaticResource MaterialDesignRaisedButton}"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
